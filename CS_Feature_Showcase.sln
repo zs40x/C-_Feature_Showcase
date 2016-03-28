@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_asynchronous_programming_with_async_and_await", "01_asynchronous_programming_with_async_and_await\01_asynchronous_programming_with_async_and_await.csproj", "{09C13CAD-4050-44BF-9F97-0358245212EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_autoprops", "02_autoprops\02_autoprops.csproj", "{56A5B787-D306-428C-9A77-359360E14CAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_autoprops.tests", "02_autoprops.tests\02_autoprops.tests.csproj", "{D8ECBC8F-4B4C-4392-A930-434E98D26CE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{09C13CAD-4050-44BF-9F97-0358245212EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09C13CAD-4050-44BF-9F97-0358245212EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09C13CAD-4050-44BF-9F97-0358245212EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A5B787-D306-428C-9A77-359360E14CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A5B787-D306-428C-9A77-359360E14CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A5B787-D306-428C-9A77-359360E14CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A5B787-D306-428C-9A77-359360E14CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8ECBC8F-4B4C-4392-A930-434E98D26CE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8ECBC8F-4B4C-4392-A930-434E98D26CE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8ECBC8F-4B4C-4392-A930-434E98D26CE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8ECBC8F-4B4C-4392-A930-434E98D26CE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
