@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using FluentAssertions;
 using Xunit;
 using _02_autoprops.Logic.Data;
@@ -7,8 +8,9 @@ namespace _02_autoprops.tests
 {
     public class MoneySpecs
     {
-        private static readonly Money OneEuro = new Money(Currency.EUR, 1);
-        private static readonly Money TwoEuro = new Money(Currency.EUR, 2);
+        private static readonly Money OneEuro = new Money(Currency.EUR, 1m);
+        private static readonly Money TwoEuro = new Money(Currency.EUR, 2m);
+        private static readonly Money FourEuro = new Money(Currency.EUR, 4m);
 
         [Fact]
         public void Null_is_not_NULL() 
@@ -22,11 +24,43 @@ namespace _02_autoprops.tests
         }
 
         [Fact]
-        public void Add_1_EUR_to_1_EUR_equals_2_EUR()
+        public void Add_1_EUR_to_1_EUR_equals_2()
         {
             var addResult = OneEuro + OneEuro;
 
             addResult.Should().Be(TwoEuro);
+        }
+
+        [Fact]
+        public void Subtract_1_EUR_from_2_equals_1()
+        {
+            var subtractionResult = TwoEuro - OneEuro;
+
+            subtractionResult.Should().Be(OneEuro);
+        }
+
+        [Fact]
+        public void Multiply_2_EUR_by_two_equals_4()
+        {
+            var product = TwoEuro*TwoEuro;
+
+            product.Should().Be(FourEuro);
+        }
+
+        [Fact]
+        public void Divide_four_EUR_by_two_equals_2()
+        {
+            var qoutient = FourEuro/TwoEuro;
+
+            qoutient.Should().Be(TwoEuro);
+        }
+
+        public void Add_Rounds_Exact()
+        {
+            var addResult = 
+                new Money(Currency.EUR, 12.31m) + new Money(Currency.EUR, 14.46m);
+
+            addResult.Should().Be(new Money(Currency.EUR, 181.69m));
         }
 
         [Fact]

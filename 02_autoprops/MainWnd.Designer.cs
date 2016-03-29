@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tbMoneyIn = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.lbInput = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbMoneyTotal = new System.Windows.Forms.TextBox();
-            this.guiUpdateTimer = new System.Windows.Forms.Timer(this.components);
+            this.tbOperator = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tbMoneyIn
@@ -45,16 +43,6 @@
             this.tbMoneyIn.TabIndex = 0;
             this.tbMoneyIn.Text = "1,00 EUR";
             this.tbMoneyIn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbMoneyIn_KeyDown);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(177, 49);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(37, 31);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "+";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lbInput
             // 
@@ -70,7 +58,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(215, 21);
+            this.label1.Location = new System.Drawing.Point(198, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 25);
             this.label1.TabIndex = 3;
@@ -78,25 +66,30 @@
             // 
             // tbMoneyTotal
             // 
-            this.tbMoneyTotal.Location = new System.Drawing.Point(220, 49);
+            this.tbMoneyTotal.Location = new System.Drawing.Point(203, 49);
             this.tbMoneyTotal.Name = "tbMoneyTotal";
+            this.tbMoneyTotal.ReadOnly = true;
             this.tbMoneyTotal.Size = new System.Drawing.Size(182, 31);
             this.tbMoneyTotal.TabIndex = 4;
             // 
-            // guiUpdateTimer
+            // tbOperator
             // 
-            this.guiUpdateTimer.Interval = 500;
-            this.guiUpdateTimer.Tick += new System.EventHandler(this.guiUpdateTimer_Tick);
+            this.tbOperator.Location = new System.Drawing.Point(177, 49);
+            this.tbOperator.Name = "tbOperator";
+            this.tbOperator.Size = new System.Drawing.Size(20, 31);
+            this.tbOperator.TabIndex = 5;
+            this.tbOperator.Text = "+";
+            this.tbOperator.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbMoneyIn_KeyDown);
             // 
             // MainWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 92);
+            this.ClientSize = new System.Drawing.Size(395, 92);
+            this.Controls.Add(this.tbOperator);
             this.Controls.Add(this.tbMoneyTotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbInput);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tbMoneyIn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainWnd";
@@ -110,11 +103,10 @@
         #endregion
 
         private System.Windows.Forms.TextBox tbMoneyIn;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lbInput;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbMoneyTotal;
-        private System.Windows.Forms.Timer guiUpdateTimer;
+        private System.Windows.Forms.TextBox tbOperator;
     }
 }
 
