@@ -1,7 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text.RegularExpressions;
 
 namespace _02_autoprops.Logic.Data
 {
@@ -84,7 +81,7 @@ namespace _02_autoprops.Logic.Data
 
         public bool Equals(Money other)
         {
-            return (other.GetHashCode() == GetHashCode());
+            return other.GetHashCode() == GetHashCode();
         }
 
         public override int GetHashCode()

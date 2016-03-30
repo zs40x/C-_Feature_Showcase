@@ -2,7 +2,7 @@
 
 namespace _02_autoprops.Logic.MoneyCalculator
 {
-    class TotalChangedEventArgs
+    public class TotalChangedEventArgs
     {
         public Money Total { get; private set; }
 
