@@ -31,7 +31,7 @@ namespace ConsoleApplication
         {
             foreach (var number in numbers)
             {
-                if(number % 2 == 0)
+                if((number != 0) && ((number & (number - 1)) == 0))
                 {
                     yield return number;
                 }
@@ -64,7 +64,7 @@ namespace ConsoleApplication
         }
         
     }
-    
+
     class Person
     {
         public int Age { get; }
